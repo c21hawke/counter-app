@@ -7,19 +7,28 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title: string = 'Counter App';
+
   name: string = 'c21hawke';
 
   count: number = 0;
 
   handleIncrease = () =>{
+
+    if (this.count === 10){
+      this.count = this.count  - 1;
+    }
     this.count = this.count + 1;
-  }
+  };
 
   handleDecrease = () => {
+
+    if (this.count === 0){
+      this.count = this.count + 1;
+    }
     this.count = this.count - 1;
-  }
+  };
 
   handleReset = () => {
     this.count = 0;
-  }
+  };
 }
